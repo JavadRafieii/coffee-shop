@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Added Dana font  */
+@font-face {
+    font-family: "dana-black";
+    src: url(./assets/fonts/DanaNoEn-Black.ttf),
+        url(./assets/fonts/DanaNoEn-Black.woff),
+        url(./assets/fonts/DanaNoEn-Black.woff2);
+}
+
+@font-face {
+    font-family: "dana-bold";
+    src: url(./assets/fonts/DanaNoEn-Bold.ttf),
+        url(./assets/fonts/DanaNoEn-Bold.woff),
+        url(./assets/fonts/DanaNoEn-Bold.woff2);
+}
+
+@font-face {
+    font-family: "dana-demibold";
+    src: url(./assets/fonts/DanaNoEn-DemiBold.ttf),
+        url(./assets/fonts/DanaNoEn-DemiBold.woff),
+        url(./assets/fonts/DanaNoEn-DemiBold.woff2);
+}
+
+@font-face {
+    font-family: "dana-extrablack";
+    src: url(./assets/fonts/DanaNoEn-ExtraBlack.ttf),
+        url(./assets/fonts/DanaNoEn-ExtraBlack.woff),
+        url(./assets/fonts/DanaNoEn-ExtraBlack.woff2);
+}
+
+@font-face {
+    font-family: "dana-extrabold";
+    src: url(./assets/fonts/DanaNoEn-ExtraBold.ttf),
+        url(./assets/fonts/DanaNoEn-ExtraBold.woff),
+        url(./assets/fonts/DanaNoEn-ExtraBold.woff2);
+}
+
+@font-face {
+    font-family: "dana-fat";
+    src: url(./assets/fonts/DanaNoEn-Fat.ttf),
+        url(./assets/fonts/DanaNoEn-fat.woff),
+        url(./assets/fonts/DanaNoEn-fat.woff2);
+}
+
+@font-face {
+    font-family: "dana-hairline";
+    src: url(./assets/fonts/DanaNoEn-Hairline.ttf),
+        url(./assets/fonts/DanaNoEn-Hairline.woff),
+        url(./assets/fonts/DanaNoEn-Hairline.woff2);
+}
+
+@font-face {
+    font-family: "dana-heavy";
+    src: url(./assets/fonts/DanaNoEn-Heavy.ttf),
+        url(./assets/fonts/DanaNoEn-Heavy.woff),
+        url(./assets/fonts/DanaNoEn-Heavy.woff2);
+}
+
+@font-face {
+    font-family: "dana-light";
+    src: url(./assets/fonts/DanaNoEn-Light.ttf),
+        url(./assets/fonts/DanaNoEn-Light.woff),
+        url(./assets/fonts/DanaNoEn-Light.woff2);
+}
+
+@font-face {
+    font-family: "dana-Medium";
+    src: url(./assets/fonts/DanaNoEn-Medium.ttf),
+        url(./assets/fonts/DanaNoEn-Medium.woff),
+        url(./assets/fonts/DanaNoEn-Medium.woff2);
+}
+
+@font-face {
+    font-family: "dana-regular";
+    src: url(./assets/fonts/DanaNoEn-Regular.ttf),
+        url(./assets/fonts/DanaNoEn-Regular.woff),
+        url(./assets/fonts/DanaNoEn-Regular.woff2);
+}
+
+@font-face {
+    font-family: "dana-thin";
+    src: url(./assets/fonts/DanaNoEn-Thin.ttf),
+        url(./assets/fonts/DanaNoEn-Thin.woff),
+        url(./assets/fonts/DanaNoEn-Thin.woff2);
+}
+
+@font-face {
+    font-family: "dana-ultralight";
+    src: url(./assets/fonts/DanaNoEn-UltraLight.ttf),
+        url(./assets/fonts/DanaNoEn-UltraLight.woff),
+        url(./assets/fonts/DanaNoEn-UltraLight.woff2);
+}
+
+/* Added Dana font  */
