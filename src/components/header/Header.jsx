@@ -37,7 +37,7 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-x-3">
                 <Search />
-                <Badge color="success" overlap="circular">
+                <Badge color="success" overlap="circular" badgeContent="0">
                     <div className="w-10 h-10 bg-[#331603] rounded-full flex items-center justify-center">
                         <IconUser />
                     </div>

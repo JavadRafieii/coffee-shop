@@ -1,6 +1,6 @@
 import Container from "../theme/Container";
 import Button from "../components/button/Button";
-import IconCoffee from "../components/icons/IconCoffee";
+import IconCoffeeBtn from "../components/icons/IconCoffeeBtn";
 import IconStore from "../components/icons/IconStore";
 
 export default function HomePage() {
@@ -16,7 +16,7 @@ export default function HomePage() {
                     <div className="mt-5 flex items-center gap-x-5">
                         <Button
                             ownStyle={"bg-[#007e57] text-white"}
-                            icon={<IconCoffee />}
+                            icon={<IconCoffeeBtn />}
                             text={"ترکیب سفارشی"}
                         />
                         <Button
