@@ -99,3 +99,13 @@
 body {
     background-color: #f7f7f8;
 }
+
+@layer components {
+    .discount-percentage-box {
+        @apply flex items-center justify-center rounded-lg w-10 h-8 absolute top-0 right-0;
+    }
+
+    .discount-line {
+        @apply w-fit relative after:absolute after:right-0 after:top-2 after:h-[1px] after:w-full after:bg-[#1b1b1d]
+    }
+}
