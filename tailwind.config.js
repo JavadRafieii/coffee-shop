@@ -18,6 +18,7 @@ module.exports = {
         "dana-regular": "dana-regular",
         "dana-thin": "dana-thin",
         "dana-ultralight": "dana-ultralight",
+        "dana-fa-medium": "dana-fa-medium",
       },
     },
   },

@@ -1,7 +1,8 @@
 import {
     createEntityAdapter,
     createSlice,
-    createAsyncThunk
+    createAsyncThunk,
+    createSelector
 } from '@reduxjs/toolkit';
 
 
@@ -14,6 +15,18 @@ export const fetchAllProducts = createAsyncThunk(
 )
 
 const productsAdapter = createEntityAdapter({});
+
+export const {
+    selectIds: selectProductsIds,
+    selectById: selectProductById,
+    selectAll: selectAllProducts,
+} = productsAdapter.getSelectors(state => state.products);
+
+export const selectProduct = createSelector(
+    state => state.products.entities,
+    (entities, id) => id,
+    (entities, id) => entities[id],
+);
 
 const productsSlice = createSlice({
     name: 'product',
