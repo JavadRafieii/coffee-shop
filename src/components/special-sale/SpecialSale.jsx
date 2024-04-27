@@ -10,7 +10,7 @@ export default function SpecialSale() {
         <div>
             {
                 productsById.length !== 0
-                && productsById.map(productByid => <ProductsCard key={productByid} id={productByid} />)
+                && productsById.map(productByid => <ProductsCard key={productByid} productId={productByid} />)
             }
         </div>
     );

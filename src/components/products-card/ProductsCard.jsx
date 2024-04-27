@@ -1,25 +1,16 @@
 import { useSelector } from "react-redux";
 import IconBasket from "../icons/IconBasket";
 import { selectProduct } from "../../configuration-redux/productsSlice";
+import { Link } from "react-router-dom";
+import { calculateDiscountedPrice, formatPriceWithComma } from "../../features/features";
 
+export default function ProductsCard({ productId }) {
 
-function calculateDiscountedPrice(price, off) {
-    const discountedPrice = price - (price * off / 100);
-    const formattedPrice = discountedPrice.toLocaleString('en-US');
-    return formattedPrice;
-};
-
-function formatPriceWithComma(price) {
-    return price.toLocaleString('en-US');
-};
-
-export default function ProductsCard({ id }) {
-
-    const product = useSelector(state => selectProduct(state, id));
+    const product = useSelector(state => selectProduct(state, productId));
 
     return (
         <div className="bg-[#efeff1] w-[300px] my-10 p-5 rounded-3xl">
-            <a href="/">
+            <Link to={`product/${productId}`}>
                 <figure className="relative">
                     <img src={`./images/${product.image}.png`} alt="..." className="h-48 mx-auto" />
                     {
@@ -29,15 +20,15 @@ export default function ProductsCard({ id }) {
                         </figcaption>
                     }
                 </figure>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to={`product/${productId}`}>
                 <h4 className="font-dana-fa-medium text-base text-center my-5">
                     {product.titleFa.slice(0, 50)} ...
                 </h4>
-            </a>
-            <div className="flex items-center justify-between">
+            </Link>
+            <div className="flex items-center justify-between font-dana-fa-medium text-[#1b1b1d]">
                 <div className="flex flex-col">
-                    <span className={product.costs.off ? "font-dana-fa-medium text-sm text-[#1b1b1d] discount-line" : "font-dana-fa-Medium text-lg text-[#1b1b1d]"}>
+                    <span className={product.costs.off ? "text-sm discount-line" : "text-lg"}>
                         {formatPriceWithComma(product.costs.price)}
                         {!product.costs.off && <span className="text-sm">تومان</span>}
                     </span>

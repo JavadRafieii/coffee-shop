@@ -7,7 +7,6 @@ import IconCoffeeDerivatives from "../components/icons/IconCoffeeDerivatives";
 import IconIranianTea from "../components/icons/IconIranianTea";
 import IconAccessories from "../components/icons/IconAccessories";
 import IconMajorCoffee from "../components/icons/IconMajorCoffee";
-import ProductsCard from "../components/products-card/ProductsCard";
 import SpecialSale from "../components/special-sale/SpecialSale";
 
 const category = [
