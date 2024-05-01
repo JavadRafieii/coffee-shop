@@ -94,8 +94,29 @@
         url(./assets/fonts/DanaNoEn-UltraLight.woff2);
 }
 
+@font-face {
+    font-family: "dana-fa-medium";
+    src: url(./assets/fonts/fa/DanaFaNum-Medium.ttf),
+        url(./assets/fonts/fa/DanaFaNum-Medium.woff),
+        url(./assets/fonts/fa/DanaFaNum-Medium.woff2);
+}
+
 /* Added Dana font  */
 
 body {
     background-color: #f7f7f8;
+}
+
+@layer components {
+    .discount-percentage-box {
+        @apply flex items-center justify-center rounded-lg w-10 h-8 absolute top-0 right-0;
+    }
+
+    .discount-line {
+        @apply w-fit relative after:absolute after:right-0 after:top-2 after:h-[1px] after:w-full after:bg-[#007e57]
+    }
+
+    [aria-selected="true"] {
+        @apply border-b-[2px] border-[#007e57] text-[#007e57]
+    }
 }

@@ -7,6 +7,7 @@ import IconCoffeeDerivatives from "../components/icons/IconCoffeeDerivatives";
 import IconIranianTea from "../components/icons/IconIranianTea";
 import IconAccessories from "../components/icons/IconAccessories";
 import IconMajorCoffee from "../components/icons/IconMajorCoffee";
+import SpecialSale from "../components/special-sale/SpecialSale";
 
 const category = [
     { icon: <IconGenuineCoffee />, title: "قهوه اصیل", description: "ما رست هفتگی قهوه و ارسال از درب کارخانه قهوه ی عمده است." },
@@ -58,6 +59,9 @@ export default function HomePage() {
                     ))}
                 </div>
             </div>
+
+            <SpecialSale />
+            
         </Container>
     );
 };
