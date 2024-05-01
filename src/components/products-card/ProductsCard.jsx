@@ -9,7 +9,7 @@ export default function ProductsCard({ productId }) {
     const product = useSelector(state => selectProduct(state, productId));
 
     return (
-        <div className="bg-[#efeff1] w-[300px] my-10 p-5 rounded-3xl">
+        <div className="bg-[#efeff1] w-[300px] p-5 rounded-3xl">
             <Link to={`product/${productId}`}>
                 <figure className="relative">
                     <img src={`./images/${product.image}.png`} alt="..." className="h-48 mx-auto" />
