@@ -1,34 +1,30 @@
 import { calculateDiscountedPrice, formatPriceWithComma } from "../../features/features";
-import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheck';
-import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
-import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
-import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+import { IconTruck, IconCheck, IconBox, IconMoney, IconTick } from "../TailwindIcons/TailwindIcons";
 
-export default function ProductInfoPay({ product }) {
+export default function ProdInfoPay({ product }) {
     return (
         <>
-            <h4 className="font-dana-regular text-base text-[#007e57] border-b-[1px] border-white pb-3">
-                <LibraryAddCheckIcon />
-                <span className="mr-2">محصول</span>
+            <h4 className="flex items-center gap-x-2 font-dana-regular text-base text-[#007e57] border-b-[1px] border-white pb-3">
+                <IconTick />
+                <span>محصول</span>
             </h4>
             <ul className="font-dana-Medium text-xs text-[#8D8D8D] flex flex-col gap-5 mt-3">
-                <li>
-                    <LocalShippingOutlinedIcon style={{ fontSize: 20 }} />
-                    <span className="mr-2">ارسال توسط فروشگاه</span>
+                <li className="flex items-center gap-x-2">
+                    <IconTruck />
+                    <span>ارسال توسط فروشگاه</span>
                 </li>
-                <li>
-                    <GppGoodOutlinedIcon style={{ fontSize: 20 }} />
-                    <span className="mr-2">گارانتی اصالت و سلامت فیزیکی کالا</span>
+                <li className="flex items-center gap-x-2">
+                    <IconCheck />
+                    <span>گارانتی اصالت و سلامت فیزیکی کالا</span>
                 </li>
-                <li>
-                    <MenuBookOutlinedIcon style={{ fontSize: 20 }} />
-                    <span className="mr-2">ضمانت تعویض کالا</span>
+                <li className="flex items-center gap-x-2">
+                    <IconBox />
+                    <span>ضمانت تعویض کالا</span>
 
                 </li>
-                <li>
-                    <LocalMallOutlinedIcon style={{ fontSize: 20 }} />
-                    <span className="mr-2">هزینه حمل به عهده خریدار</span>
+                <li className="flex items-center gap-x-2">
+                    <IconMoney />
+                    <span>هزینه حمل به عهده خریدار</span>
                 </li>
             </ul>
             <div className="flex items-center justify-between">
