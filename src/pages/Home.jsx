@@ -7,6 +7,7 @@ import IconIranianTea from "../components/icons/IconIranianTea";
 import IconAccessories from "../components/icons/IconAccessories";
 import IconMajorCoffee from "../components/icons/IconMajorCoffee";
 import SpecialSale from "../components/special-sale/SpecialSale";
+import NewProdSec from "../components/NewProdSec/NewProdSec";
 
 import {
     IconPlant,
@@ -28,6 +29,8 @@ export default function HomePage() {
     return (
         <>
             <Container>
+
+                {/* First section */}
                 <div className="grid grid-cols-2 items-center my-10">
                     <div>
                         <h2 className="font-dana-light text-[#1b1b1d] text-3xl">آنلاین شاپ تخصصی</h2>
@@ -54,7 +57,10 @@ export default function HomePage() {
                         </figure>
                     </div>
                 </div>
-                <div className="bg-[#1b1b1d] p-5 rounded-3xl mb-20">
+                {/* First section */}
+
+                {/* Category section */}
+                <div className="bg-[#1b1b1d] p-5 rounded-3xl mb-52">
                     <div className="grid grid-cols-5 gap-x-8 text-white">
                         {category.map((item, index) => (
                             <div key={index}>
@@ -67,20 +73,18 @@ export default function HomePage() {
                         ))}
                     </div>
                 </div>
-
-                <h3 className="font-dana-regular text-4xl text-[#1b1b1d] flex items-end justify-center gap-x-2 mb-64">
-                    <IconPlant />
-                    فروش ویژه
-                    <IconPoint />
-                </h3>
+                {/* Category section */}
 
             </Container>
 
-            <div className="bg-[#1b1b1d] relative pt-56">
+            <div className="bg-[#1b1b1d]">
                 <Container>
 
+                    {/* Special sales section */}
                     <SpecialSale />
+                    {/* Special sales section */}
 
+                    {/* About us section */}
                     <div className="grid grid-cols-2">
                         <div className="flex flex-col gap-8 justify-center">
                             <h3 className="font-dana-regular text-4xl text-white flex items-end gap-x-2">
@@ -140,6 +144,12 @@ export default function HomePage() {
                             </ul>
                         </div>
                     </div>
+                    {/* About us section */}
+
+                    {/* New products section */}
+                    <NewProdSec />
+                    {/* New products section */}
+
                 </Container>
             </div>
         </>

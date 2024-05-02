@@ -119,4 +119,16 @@ body {
     [aria-selected="true"] {
         @apply border-b-[2px] border-[#007e57] text-[#007e57]
     }
+
+    /* Slider style */
+    .mySwiper .swiper-button-next,
+    .mySwiper .swiper-button-prev {
+        @apply w-6 h-9 rounded-lg bg-[#444444] text-white
+    }
+
+    .mySwiper .swiper-button-next::after,
+    .mySwiper .swiper-button-prev::after {
+        @apply text-sm
+    }
+    /* Slider style */
 }
