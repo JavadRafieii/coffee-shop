@@ -28,6 +28,34 @@ export const selectProduct = createSelector(
     (entities, id) => entities[id],
 );
 
+export const selectSpecialProductIds = createSelector(
+    state => state.products.entities,
+    state => state.products.ids,
+    (entities, ids) => {
+        const filterIds = [];
+        ids.filter(id => {
+            if (entities[id].type.includes("special")) {
+                filterIds.push(id)
+            }
+        })
+        return filterIds;
+    }
+);
+
+export const selectNewlProductIds = createSelector(
+    state => state.products.entities,
+    state => state.products.ids,
+    (entities, ids) => {
+        const filterIds = [];
+        ids.filter(id => {
+            if (entities[id].type.includes("new")) {
+                filterIds.push(id)
+            }
+        })
+        return filterIds;
+    }
+);
+
 const productsSlice = createSlice({
     name: 'product',
     initialState: productsAdapter.getInitialState(),

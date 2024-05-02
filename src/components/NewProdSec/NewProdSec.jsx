@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
-import { selectProductsIds } from "../../configuration-redux/productsSlice";
+import { selectNewlProductIds } from "../../configuration-redux/productsSlice";
 import ProductsCard from "../products-card/ProductsCard";
 import { IconPlant, IconPoint } from "../TailwindIcons/TailwindIcons";
 import Button from "../button/Button";
 
 export default function NewProdSec() {
 
-    const productsById = useSelector(selectProductsIds);
+    const productsById = useSelector(selectNewlProductIds);
 
     return (
         <div className=" translate-y-32">
@@ -17,7 +17,7 @@ export default function NewProdSec() {
             </h3>
             <div className="grid grid-cols-4 gap-8">
                 {productsById.length !== 0
-                    && productsById.map(productById => (
+                    && productsById.slice(0, 8).map(productById => (
                         <div key={productById}>
                             <ProductsCard productId={productById} />
                         </div>

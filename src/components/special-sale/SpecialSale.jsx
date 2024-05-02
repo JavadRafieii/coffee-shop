@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectProductsIds } from "../../configuration-redux/productsSlice";
+import { selectSpecialProductIds } from "../../configuration-redux/productsSlice";
 import ProductsCard from "../products-card/ProductsCard";
 import { IconPlant, IconPoint } from "../TailwindIcons/TailwindIcons";
 // Import Swiper React components
@@ -12,7 +12,9 @@ import { Navigation } from 'swiper/modules';
 
 export default function SpecialSale() {
 
-    const productsById = useSelector(selectProductsIds);
+    const productsById = useSelector(selectSpecialProductIds);
+
+    console.log(productsById);
 
     return (
         <div className=" -translate-y-32">
@@ -27,6 +29,8 @@ export default function SpecialSale() {
                     navigation={true}
                     slidesPerView={4}
                     spaceBetween={30}
+                    loop={true}
+                    speed={1000}
                     modules={[Navigation]}
                     className="mySwiper"
                 >
